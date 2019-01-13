@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP PIC18F45K22
+D 40-Pin-DIP, Low-Power, High-Performance Microcontrollers with XLP Technology
+K pic18f45k22, pic18
+F https://www.microchip.com/stellent/groups/picmicro_sg/documents/devicedoc/cn547043.pdf
+$ENDCMP
+#
+#End Doc Library

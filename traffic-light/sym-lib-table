@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Traffic_Light)(type Legacy)(uri /home/elektroneo/Documents/Electronics/Traffic_Light_Project/traffic-light/Traffic_Light.lib)(options "")(descr ""))
+)

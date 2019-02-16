@@ -54,42 +54,42 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x02_Male J1
 U 1 1 5BF6B5A2
-P 1400 1700
-F 0 "J1" H 1506 1878 50  0000 C CNN
-F 1 "BATTERY" H 1506 1787 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1400 1700 50  0001 C CNN
-F 3 "~" H 1400 1700 50  0001 C CNN
-	1    1400 1700
+P 850 1700
+F 0 "J1" H 956 1878 50  0000 C CNN
+F 1 "BATTERY" H 956 1787 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 850 1700 50  0001 C CNN
+F 3 "~" H 850 1700 50  0001 C CNN
+	1    850  1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 5BF6B66D
-P 1700 1900
-F 0 "#PWR01" H 1700 1650 50  0001 C CNN
-F 1 "GND" H 1705 1727 50  0000 C CNN
-F 2 "" H 1700 1900 50  0001 C CNN
-F 3 "" H 1700 1900 50  0001 C CNN
-	1    1700 1900
+P 1150 1900
+F 0 "#PWR01" H 1150 1650 50  0001 C CNN
+F 1 "GND" H 1155 1727 50  0000 C CNN
+F 2 "" H 1150 1900 50  0001 C CNN
+F 3 "" H 1150 1900 50  0001 C CNN
+	1    1150 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1700 1900 1700 1800
+	1150 1900 1150 1800
 Wire Wire Line
-	1700 1800 1600 1800
+	1150 1800 1050 1800
 $Comp
 L power:+BATT #PWR02
 U 1 1 5BF6B6AF
-P 1800 1700
-F 0 "#PWR02" H 1800 1550 50  0001 C CNN
-F 1 "+BATT" V 1815 1828 50  0000 L CNN
-F 2 "" H 1800 1700 50  0001 C CNN
-F 3 "" H 1800 1700 50  0001 C CNN
-	1    1800 1700
+P 1250 1700
+F 0 "#PWR02" H 1250 1550 50  0001 C CNN
+F 1 "+BATT" V 1350 1650 50  0000 L CNN
+F 2 "" H 1250 1700 50  0001 C CNN
+F 3 "" H 1250 1700 50  0001 C CNN
+	1    1250 1700
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1800 1700 1600 1700
+	1250 1700 1050 1700
 $Comp
 L power:+3.3V #PWR08
 U 1 1 5BF6B76E
@@ -123,16 +123,14 @@ Wire Wire Line
 $Comp
 L power:+BATT #PWR06
 U 1 1 5BF6B861
-P 2850 1700
-F 0 "#PWR06" H 2850 1550 50  0001 C CNN
-F 1 "+BATT" V 2865 1827 50  0000 L CNN
-F 2 "" H 2850 1700 50  0001 C CNN
-F 3 "" H 2850 1700 50  0001 C CNN
-	1    2850 1700
+P 1750 1550
+F 0 "#PWR06" H 1750 1400 50  0001 C CNN
+F 1 "+BATT" V 1850 1450 50  0000 L CNN
+F 2 "" H 1750 1550 50  0001 C CNN
+F 3 "" H 1750 1550 50  0001 C CNN
+	1    1750 1550
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2850 1700 2950 1700
 $Comp
 L power:+BATT #PWR013
 U 1 1 5BF6B8CF
@@ -523,13 +521,13 @@ F 3 "" H 5700 4150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Notes Line
-	1150 1350 5700 1350
+	650  1350 5700 1350
 Wire Notes Line
 	5700 1350 5700 2400
 Wire Notes Line
-	5700 2400 1150 2400
+	5700 2400 650  2400
 Wire Notes Line
-	1150 2400 1150 1350
+	650  2400 650  1350
 Text Notes 3150 2650 0    100  ~ 20
 POWER
 $Comp
@@ -592,17 +590,6 @@ Wire Wire Line
 	1850 4700 1550 4700
 Text Label 1550 4700 0    50   ~ 0
 LED
-$Comp
-L Connector:Conn_01x03_Male J7
-U 1 1 5BFC7224
-P 7500 1950
-F 0 "J7" H 7550 2300 50  0000 C CNN
-F 1 "Traffic_Light_1" H 7750 2200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7500 1950 50  0001 C CNN
-F 3 "~" H 7500 1950 50  0001 C CNN
-	1    7500 1950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9550 3400 9900 3400
 Wire Wire Line
@@ -615,17 +602,6 @@ Text Label 9900 3500 2    50   ~ 0
 LED_Y_1
 Text Label 9900 3600 2    50   ~ 0
 LED_G_1
-$Comp
-L Connector:Conn_01x03_Male J8
-U 1 1 5BFD5971
-P 8250 1950
-F 0 "J8" H 8300 2300 50  0000 C CNN
-F 1 "Traffic_Light_2" H 8500 2200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8250 1950 50  0001 C CNN
-F 3 "~" H 8250 1950 50  0001 C CNN
-	1    8250 1950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9550 3700 9900 3700
 Wire Wire Line
@@ -638,51 +614,29 @@ Text Label 9900 3800 2    50   ~ 0
 LED_Y_2
 Text Label 9900 3900 2    50   ~ 0
 LED_G_2
-$Comp
-L Connector:Conn_01x03_Male J9
-U 1 1 5BFD8252
-P 9000 1950
-F 0 "J9" H 9050 2300 50  0000 C CNN
-F 1 "Traffic_Light_3" H 9250 2200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9000 1950 50  0001 C CNN
-F 3 "~" H 9000 1950 50  0001 C CNN
-	1    9000 1950
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	9200 1750 9550 1750
 Wire Wire Line
 	9200 1850 9550 1850
 Wire Wire Line
 	9200 1950 9550 1950
-Wire Wire Line
-	9200 2050 9550 2050
-Text Label 9550 1850 2    50   ~ 0
+Text Label 9550 1750 2    50   ~ 0
 LED_R_3
-Text Label 9550 1950 2    50   ~ 0
+Text Label 9550 1850 2    50   ~ 0
 LED_Y_3
-Text Label 9550 2050 2    50   ~ 0
+Text Label 9550 1950 2    50   ~ 0
 LED_G_3
-$Comp
-L Connector:Conn_01x03_Male J10
-U 1 1 5BFDADCC
-P 9700 1950
-F 0 "J10" H 9750 2300 50  0000 C CNN
-F 1 "Traffic_Light_4" H 9950 2200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9700 1950 50  0001 C CNN
-F 3 "~" H 9700 1950 50  0001 C CNN
-	1    9700 1950
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	9900 1750 10250 1750
 Wire Wire Line
 	9900 1850 10250 1850
 Wire Wire Line
 	9900 1950 10250 1950
-Wire Wire Line
-	9900 2050 10250 2050
-Text Label 10250 1850 2    50   ~ 0
+Text Label 10250 1750 2    50   ~ 0
 LED_R_4
-Text Label 10250 1950 2    50   ~ 0
+Text Label 10250 1850 2    50   ~ 0
 LED_Y_4
-Text Label 10250 2050 2    50   ~ 0
+Text Label 10250 1950 2    50   ~ 0
 LED_G_4
 NoConn ~ 5350 3850
 NoConn ~ 5350 4850
@@ -837,17 +791,6 @@ Text Notes 2100 7250 0    100  ~ 20
 ICSP
 NoConn ~ 4450 3850
 $Comp
-L Traffic_Light:PIC18F45K22 U3
-U 1 1 5C054184
-P 8850 4200
-F 0 "U3" H 9400 5150 50  0000 C CNN
-F 1 "PIC18F45K22" H 8850 4200 50  0000 C CNN
-F 2 "Package_DIP:DIP-40_W15.24mm_LongPads" V 8850 5100 50  0001 C CNN
-F 3 "https://www.microchip.com/stellent/groups/picmicro_sg/documents/devicedoc/cn547043.pdf" V 8850 5100 50  0001 C CNN
-	1    8850 4200
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR0101
 U 1 1 5C058212
 P 8350 5300
@@ -889,28 +832,28 @@ Wire Wire Line
 Wire Wire Line
 	8950 5300 8950 5200
 Wire Wire Line
+	7700 1750 8050 1750
+Wire Wire Line
 	7700 1850 8050 1850
 Wire Wire Line
 	7700 1950 8050 1950
-Wire Wire Line
-	7700 2050 8050 2050
-Text Label 8050 1850 2    50   ~ 0
+Text Label 8050 1750 2    50   ~ 0
 LED_R_1
-Text Label 8050 1950 2    50   ~ 0
+Text Label 8050 1850 2    50   ~ 0
 LED_Y_1
-Text Label 8050 2050 2    50   ~ 0
+Text Label 8050 1950 2    50   ~ 0
 LED_G_1
+Wire Wire Line
+	8450 1750 8800 1750
 Wire Wire Line
 	8450 1850 8800 1850
 Wire Wire Line
 	8450 1950 8800 1950
-Wire Wire Line
-	8450 2050 8800 2050
-Text Label 8800 1850 2    50   ~ 0
+Text Label 8800 1750 2    50   ~ 0
 LED_R_2
-Text Label 8800 1950 2    50   ~ 0
+Text Label 8800 1850 2    50   ~ 0
 LED_Y_2
-Text Label 8800 2050 2    50   ~ 0
+Text Label 8800 1950 2    50   ~ 0
 LED_G_2
 Wire Wire Line
 	9550 5000 9900 5000
@@ -1048,12 +991,12 @@ F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Female J?
+L Connector:Conn_01x04_Female J6
 U 1 1 5C16FB44
 P 6500 1800
-F 0 "J?" H 6400 2050 50  0000 L CNN
+F 0 "J6" H 6400 2050 50  0000 L CNN
 F 1 "Ground" H 6250 1500 50  0000 L CNN
-F 2 "" H 6500 1800 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 6500 1800 50  0001 C CNN
 F 3 "~" H 6500 1800 50  0001 C CNN
 	1    6500 1800
 	1    0    0    -1  
@@ -1075,10 +1018,10 @@ Connection ~ 6250 1800
 Wire Wire Line
 	6250 1800 6250 1850
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 5C180243
 P 6150 1850
-F 0 "#PWR?" H 6150 1600 50  0001 C CNN
+F 0 "#PWR0104" H 6150 1600 50  0001 C CNN
 F 1 "GND" H 6155 1677 50  0000 C CNN
 F 2 "" H 6150 1850 50  0001 C CNN
 F 3 "" H 6150 1850 50  0001 C CNN
@@ -1090,4 +1033,138 @@ Wire Wire Line
 Connection ~ 6250 1850
 Wire Wire Line
 	6250 1850 6250 1900
+$Comp
+L Diode:1N4007 D2
+U 1 1 5C6B1FD6
+P 1850 1800
+F 0 "D2" H 1850 1700 50  0000 C CNN
+F 1 "1N4007" H 1850 1900 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 1850 1625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1850 1800 50  0001 C CNN
+	1    1850 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 5C6B219A
+P 2250 2100
+F 0 "SW1" H 2250 2300 50  0000 C CNN
+F 1 "PWR" H 2250 1900 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 2250 2100 50  0001 C CNN
+F 3 "" H 2250 2100 50  0001 C CNN
+	1    2250 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 1700 2450 2000
+Wire Wire Line
+	2450 1700 2950 1700
+Wire Wire Line
+	1850 1950 1850 2100
+Wire Wire Line
+	1850 2100 2050 2100
+Wire Wire Line
+	1850 1650 1850 1550
+Wire Wire Line
+	1850 1550 1750 1550
+NoConn ~ 2450 2200
+$Comp
+L Connector:Conn_01x04_Male J7
+U 1 1 5C6D68B3
+P 7500 1850
+F 0 "J7" H 7600 2100 50  0000 C CNN
+F 1 "Traffic_LEDS-1" H 7750 1550 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7500 1850 50  0001 C CNN
+F 3 "~" H 7500 1850 50  0001 C CNN
+	1    7500 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5C6DCD0F
+P 7700 2050
+F 0 "#PWR0105" H 7700 1800 50  0001 C CNN
+F 1 "GND" V 7705 1922 50  0000 R CNN
+F 2 "" H 7700 2050 50  0001 C CNN
+F 3 "" H 7700 2050 50  0001 C CNN
+	1    7700 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J8
+U 1 1 5C6DCDDB
+P 8250 1850
+F 0 "J8" H 8350 2100 50  0000 C CNN
+F 1 "Traffic_LEDS-2" H 8500 1550 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8250 1850 50  0001 C CNN
+F 3 "~" H 8250 1850 50  0001 C CNN
+	1    8250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J9
+U 1 1 5C6DCE39
+P 9000 1850
+F 0 "J9" H 9100 2100 50  0000 C CNN
+F 1 "Traffic_LEDS-3" H 9250 1550 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9000 1850 50  0001 C CNN
+F 3 "~" H 9000 1850 50  0001 C CNN
+	1    9000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J10
+U 1 1 5C6DCE95
+P 9700 1850
+F 0 "J10" H 9800 2100 50  0000 C CNN
+F 1 "Traffic_LEDS-4" H 9950 1550 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9700 1850 50  0001 C CNN
+F 3 "~" H 9700 1850 50  0001 C CNN
+	1    9700 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5C6DCFE5
+P 8450 2050
+F 0 "#PWR0106" H 8450 1800 50  0001 C CNN
+F 1 "GND" V 8455 1922 50  0000 R CNN
+F 2 "" H 8450 2050 50  0001 C CNN
+F 3 "" H 8450 2050 50  0001 C CNN
+	1    8450 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5C6DD022
+P 9200 2050
+F 0 "#PWR0107" H 9200 1800 50  0001 C CNN
+F 1 "GND" V 9205 1922 50  0000 R CNN
+F 2 "" H 9200 2050 50  0001 C CNN
+F 3 "" H 9200 2050 50  0001 C CNN
+	1    9200 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5C6DD05F
+P 9900 2050
+F 0 "#PWR0108" H 9900 1800 50  0001 C CNN
+F 1 "GND" V 9905 1922 50  0000 R CNN
+F 2 "" H 9900 2050 50  0001 C CNN
+F 3 "" H 9900 2050 50  0001 C CNN
+	1    9900 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Traffic_Light:PIC18F45K22 U3
+U 1 1 5C6DD591
+P 8850 4200
+F 0 "U3" H 8300 5150 50  0000 C CNN
+F 1 "PIC18F45K22" H 8850 4200 50  0000 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm_LongPads" V 8850 5100 50  0001 C CNN
+F 3 "https://www.microchip.com/stellent/groups/picmicro_sg/documents/devicedoc/cn547043.pdf" V 8850 5100 50  0001 C CNN
+	1    8850 4200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

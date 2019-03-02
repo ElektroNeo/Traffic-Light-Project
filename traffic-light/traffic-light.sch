@@ -80,13 +80,13 @@ Wire Wire Line
 $Comp
 L power:+BATT #PWR02
 U 1 1 5BF6B6AF
-P 1250 1700
-F 0 "#PWR02" H 1250 1550 50  0001 C CNN
-F 1 "+BATT" V 1350 1650 50  0000 L CNN
-F 2 "" H 1250 1700 50  0001 C CNN
-F 3 "" H 1250 1700 50  0001 C CNN
-	1    1250 1700
-	0    1    1    0   
+P 1850 2100
+F 0 "#PWR02" H 1850 1950 50  0001 C CNN
+F 1 "+BATT" V 1950 2050 50  0000 L CNN
+F 2 "" H 1850 2100 50  0001 C CNN
+F 3 "" H 1850 2100 50  0001 C CNN
+	1    1850 2100
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	1250 1700 1050 1700
@@ -120,17 +120,6 @@ Wire Wire Line
 	5350 1600 5350 1700
 Wire Wire Line
 	5350 1700 5200 1700
-$Comp
-L power:+BATT #PWR06
-U 1 1 5BF6B861
-P 1750 1550
-F 0 "#PWR06" H 1750 1400 50  0001 C CNN
-F 1 "+BATT" V 1850 1450 50  0000 L CNN
-F 2 "" H 1750 1550 50  0001 C CNN
-F 3 "" H 1750 1550 50  0001 C CNN
-	1    1750 1550
-	0    -1   -1   0   
-$EndComp
 $Comp
 L power:+BATT #PWR013
 U 1 1 5BF6B8CF
@@ -1065,8 +1054,6 @@ Wire Wire Line
 	1850 2100 2050 2100
 Wire Wire Line
 	1850 1650 1850 1550
-Wire Wire Line
-	1850 1550 1750 1550
 NoConn ~ 2450 2200
 $Comp
 L Connector:Conn_01x04_Male J7
@@ -1167,4 +1154,9 @@ F 3 "https://www.microchip.com/stellent/groups/picmicro_sg/documents/devicedoc/c
 	1    8850 4200
 	1    0    0    -1  
 $EndComp
+Connection ~ 1850 2100
+Wire Wire Line
+	1250 1550 1250 1700
+Wire Wire Line
+	1250 1550 1850 1550
 $EndSCHEMATC

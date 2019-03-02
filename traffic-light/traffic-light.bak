@@ -996,7 +996,7 @@ U 1 1 5C16FB44
 P 6500 1800
 F 0 "J6" H 6400 2050 50  0000 L CNN
 F 1 "Ground" H 6250 1500 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 6500 1800 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6500 1800 50  0001 C CNN
 F 3 "~" H 6500 1800 50  0001 C CNN
 	1    6500 1800
 	1    0    0    -1  

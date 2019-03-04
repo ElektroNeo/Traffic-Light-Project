@@ -88,183 +88,142 @@ void road3(void);
 void road4(void);
 
 // interrupt function 
-//void __interrupt() cardDetected(void){
-void cardDetected(void){ 
+void __interrupt() cardDetected(void){ 
     INTCONbits.GIE = 0;
+    
     // ------------------- Road 1 -------------------
     if(PORTAbits.RA0 == 0 && PORTAbits.RA1 == 0) {
         switch(option) {
-            case 1: 
-                break;
             case 2:
                 PORTBbits.RB3 = 1;
-                PORTBbits.RB6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 3:
                 PORTDbits.RD6 = 1;
-                PORTBbits.RB6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 4:
                 PORTCbits.RC6 = 1;
-                PORTBbits.RB6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
         }
+        PORTBbits.RB6 = 1;
+        __delay_ms(Y_TIME*100);
         road1();
-        while((PORTAbits.RA0 == 0 && PORTAbits.RA1 == 1) || (PORTAbits.RA0 == 1 && PORTAbits.RA1 == 0) || (PORTAbits.RA0 == 1 && PORTAbits.RA1 == 1));
-        switch(option) {
-            case 1: 
-                break;
+        while((PORTAbits.RA0 == 0 && PORTAbits.RA1 == 0))
+                __delay_ms(10);
+        /*switch(option) {
             case 2:
                 PORTBbits.RB3 = 1;
-                PORTBbits.RB6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 3:
                 PORTDbits.RD6 = 1;
-                PORTBbits.RB6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 4:
                 PORTCbits.RC6 = 1;
-                PORTBbits.RB6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
         }
+        PORTBbits.RB6 = 1;
+        __delay_ms(Y_TIME*100);*/
     }
     // ------------------- Road 2 -------------------
     else if(PORTAbits.RA0 == 0 && PORTAbits.RA1 == 1) {
         switch(option) {
             case 1: 
                 PORTBbits.RB6 = 1;
-                PORTBbits.RB3 = 1;
-                __delay_ms(Y_TIME*100);
-                break;
-            case 2:
                 break;
             case 3:
                 PORTDbits.RD6 = 1;
-                PORTBbits.RB3 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 4:
                 PORTCbits.RC6 = 1;
-                PORTBbits.RB3 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
         }
+        PORTBbits.RB3 = 1;
+        __delay_ms(Y_TIME*100);
         road2();
-        while((PORTAbits.RA0 == 0 && PORTAbits.RA1 == 0) || (PORTAbits.RA0 == 1 && PORTAbits.RA1 == 0) || (PORTAbits.RA0 == 1 && PORTAbits.RA1 == 1));
-        switch(option) {
+        while((PORTAbits.RA0 == 0 && PORTAbits.RA1 == 1))
+                __delay_ms(10);
+        /*switch(option) {
             case 1: 
                 PORTBbits.RB6 = 1;
-                PORTBbits.RB3 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 2:
                 break;
             case 3:
                 PORTDbits.RD6 = 1;
-                PORTBbits.RB3 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 4:
                 PORTCbits.RC6 = 1;
-                PORTBbits.RB3 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
         }
+        PORTBbits.RB3 = 1;
+        __delay_ms(Y_TIME*100);*/
     }
     // ------------------- Road 3 -------------------
     else if(PORTAbits.RA0 == 1 && PORTAbits.RA1 == 0) {
         switch(option) {
             case 1: 
                 PORTBbits.RB6 = 1;
-                PORTDbits.RD6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 2:
                 PORTBbits.RB3 = 1;
-                PORTDbits.RD6 = 1;
-                __delay_ms(Y_TIME*100);
-                break;
-            case 3:
                 break;
             case 4:
                 PORTCbits.RC6 = 1;
-                PORTDbits.RD6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
         }
+        PORTDbits.RD6 = 1;
+        __delay_ms(Y_TIME*100);
         road3();
-        while((PORTAbits.RA0 == 0 && PORTAbits.RA1 == 1) || (PORTAbits.RA0 == 0 && PORTAbits.RA1 == 0) || (PORTAbits.RA0 == 1 && PORTAbits.RA1 == 1));
-        switch(option) {
+        while((PORTAbits.RA0 == 1 && PORTAbits.RA1 == 0))
+                __delay_ms(10);
+        /*switch(option) {
             case 1: 
                 PORTBbits.RB6 = 1;
-                PORTDbits.RD6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 2:
                 PORTBbits.RB3 = 1;
-                PORTDbits.RD6 = 1;
-                __delay_ms(Y_TIME*100);
-                break;
-            case 3:
                 break;
             case 4:
                 PORTCbits.RC6 = 1;
-                PORTDbits.RD6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
         }
+        PORTDbits.RD6 = 1;
+        __delay_ms(Y_TIME*100);*/
     }
     // ------------------- Road 4 -------------------
     else if(PORTAbits.RA0 == 1 && PORTAbits.RA1 == 1) {
         switch(option) {
             case 1: 
                 PORTBbits.RB6 = 1;
-                PORTCbits.RC6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 2:
                 PORTBbits.RB3 = 1;
-                PORTCbits.RC6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 3:
                 PORTDbits.RD6 = 1;
-                PORTCbits.RC6 = 1;
-                __delay_ms(Y_TIME*100);
-                break;
-            case 4:
                 break;
         }
+        PORTCbits.RC6 = 1;
+        __delay_ms(Y_TIME*100);
         road4();
-        while((PORTAbits.RA0 == 0 && PORTAbits.RA1 == 1) || (PORTAbits.RA0 == 1 && PORTAbits.RA1 == 0) || (PORTAbits.RA0 == 0 && PORTAbits.RA1 == 0));
-        switch(option) {
+        while((PORTAbits.RA0 == 1 && PORTAbits.RA1 == 1))
+                __delay_ms(10);
+        /*switch(option) {
             case 1: 
                 PORTBbits.RB6 = 1;
-                PORTCbits.RC6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 2:
                 PORTBbits.RB3 = 1;
-                PORTCbits.RC6 = 1;
-                __delay_ms(Y_TIME*100);
                 break;
             case 3:
                 PORTDbits.RD6 = 1;
-                PORTCbits.RC6 = 1;
-                __delay_ms(Y_TIME*100);
-                break;
-            case 4:
                 break;
         }
+        PORTCbits.RC6 = 1;
+        __delay_ms(Y_TIME*100);*/
     }
+    
     INTCONbits.INT0IF = 0;
-    INTCONbits.GIE = 0  ;
+    INTCONbits.GIE = 1;
 }
 
 void main(void) {
@@ -274,8 +233,8 @@ void main(void) {
 
     OSCCONbits.IRCF = 0b111;
     
-    INTCONbits.GIE = 0;
-    INTCONbits.INT0IE = 0;
+    INTCONbits.GIE = 1;
+    INTCONbits.INT0IE = 1;
     
     PORTB = 0;
     PORTA = 0;
@@ -291,100 +250,34 @@ void main(void) {
     ANSELD = 0;
     
     while(1) {
-        /*option = 1;
-        PORTBbits.RB6 = 1; // road 1 yellow
-        PORTCbits.RC6 = 1; // road 4 yellow
-        __delay_ms(Y_TIME);
-        road1();
-        __delay_ms(R_TIME);
-
-        option = 2;
-        PORTBbits.RB3 = 1; // road 2 yellow
-        PORTBbits.RB6 = 1; // road 1 yellow
-        __delay_ms(Y_TIME);
-        road2();
-        __delay_ms(R_TIME);
-
-        option = 3;
-        PORTDbits.RD6 = 1; // road 3 yellow
-        PORTBbits.RB3 = 1; // road 2 yellow
-        __delay_ms(Y_TIME);
-        road3();
-        __delay_ms(R_TIME);
-
-        option = 4;
-        PORTCbits.RC6 = 1; // road 4 yellow
-        PORTDbits.RD6 = 1; // road 3 yellow
-        __delay_ms(Y_TIME);
-        road4();
-        __delay_ms(R_TIME);*/
-        
         option = 1;
         PORTBbits.RB6 = 1; // road 1 yellow
         PORTCbits.RC6 = 1; // road 4 yellow
-        for(int i = 0; i < Y_TIME; i++) {
-            __delay_ms(100);
-            if(PORTBbits.RB0 == 1) {
-                cardDetected();
-            }
-        }
+        __delay_ms(Y_TIME*100);
         road1();
-        for(int i = 0; i < R_TIME; i++) {
-            __delay_ms(100);
-            if(PORTBbits.RB0 == 1) {
-                cardDetected();
-            }
-        }
+        __delay_ms(R_TIME*100);
+
         option = 2;
         PORTBbits.RB3 = 1; // road 2 yellow
         PORTBbits.RB6 = 1; // road 1 yellow
-        for(int i = 0; i < Y_TIME; i++) {
-            __delay_ms(100);
-            if(PORTBbits.RB0 == 1) {
-                cardDetected();
-            }
-        }
+        __delay_ms(Y_TIME*100);
         road2();
-        for(int i = 0; i < R_TIME; i++) {
-            __delay_ms(100);
-            if(PORTBbits.RB0 == 1) {
-                cardDetected();
-            }
-        }
+        __delay_ms(R_TIME*100);
 
         option = 3;
         PORTDbits.RD6 = 1; // road 3 yellow
         PORTBbits.RB3 = 1; // road 2 yellow
-        for(int i = 0; i < Y_TIME; i++) {
-            __delay_ms(100);
-            if(PORTBbits.RB0 == 1) {
-                cardDetected();
-            }
-        }
+        __delay_ms(Y_TIME*100);
         road3();
-        for(int i = 0; i < R_TIME; i++) {
-            __delay_ms(100);
-            if(PORTBbits.RB0 == 1) {
-                cardDetected();
-            }
-        }
+        __delay_ms(R_TIME*100);
 
         option = 4;
         PORTCbits.RC6 = 1; // road 4 yellow
         PORTDbits.RD6 = 1; // road 3 yellow
-        for(int i = 0; i < Y_TIME; i++) {
-            __delay_ms(100);
-            if(PORTBbits.RB0 == 1) {
-                cardDetected();
-            }
-        }
+        __delay_ms(Y_TIME*100);
         road4();
-        for(int i = 0; i < R_TIME; i++) {
-            __delay_ms(100);
-            if(PORTBbits.RB0 == 1) {
-                cardDetected();
-            }
-        }
+        __delay_ms(R_TIME*100);
+       
     }
     return;
 }
@@ -400,7 +293,7 @@ void road1(void) {
 
     PORTDbits.RD7 = 1;
     PORTDbits.RD6 = 0;
-    PORTDbits.RD4 = 0;
+    PORTDbits.RD5 = 0;
 
     PORTCbits.RC7 = 1;
     PORTCbits.RC6 = 0;
@@ -418,7 +311,7 @@ void road2(void) {
 
     PORTDbits.RD7 = 1;
     PORTDbits.RD6 = 0;
-    PORTDbits.RD4 = 0;
+    PORTDbits.RD5 = 0;
 
     PORTCbits.RC7 = 1;
     PORTCbits.RC6 = 0;
@@ -436,7 +329,7 @@ void road3(void) {
 
     PORTDbits.RD7 = 0;
     PORTDbits.RD6 = 0;
-    PORTDbits.RD4 = 1;
+    PORTDbits.RD5 = 1;
 
     PORTCbits.RC7 = 1;
     PORTCbits.RC6 = 0;
@@ -454,7 +347,7 @@ void road4(void) {
 
     PORTDbits.RD7 = 1;
     PORTDbits.RD6 = 0;
-    PORTDbits.RD4 = 0;
+    PORTDbits.RD5 = 0;
 
     PORTCbits.RC7 = 0;
     PORTCbits.RC6 = 0;

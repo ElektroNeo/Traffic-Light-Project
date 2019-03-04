@@ -42,11 +42,12 @@
 #define cardSelect0       3 
 #define cardSelect1       4
 
-byte ssPins[] = {SS_1_PIN, SS_2_PIN, SS_3_PIN, SS_4_PIN};
+byte ssPins[4] = {SS_1_PIN, SS_2_PIN, SS_3_PIN, SS_4_PIN};
 
 byte readCard[4];    // Stores scanned ID read from RFID Module
 //byte masterCard[4] = {0xF3, 0x29, 0xEA, 0x21}; // Big Card
-byte masterCard[4] = {0x79, 0xA2, 0xC6, 0x02}; // Small Card
+//byte masterCard[4] = {0x79, 0xA2, 0xC6, 0x02}; // Small Card
+byte masterCard[4] = {0xCE, 0xF3, 0xE8, 0x62}; // Bahtiyar Bayram ID Card
 boolean match = false;          // initialize card match to false
 boolean production = false;
 

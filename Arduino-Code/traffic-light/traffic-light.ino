@@ -32,9 +32,9 @@
 
 #define RST_PIN           9          // Configurable, see typical pin layout above
 #define SS_1_PIN          5          // Configurable, take a unused pin, only HIGH/LOW required
-#define SS_2_PIN          6          // Configurable, take a unused pin, only HIGH/LOW required
-#define SS_3_PIN          7          // Configurable, take a unused pin, only HIGH/LOW required
-#define SS_4_PIN          8          // Configurable, take a unused pin, only HIGH/LOW required
+#define SS_2_PIN          7          // Configurable, take a unused pin, only HIGH/LOW required
+#define SS_3_PIN          8          // Configurable, take a unused pin, only HIGH/LOW required
+#define SS_4_PIN          6          // Configurable, take a unused pin, only HIGH/LOW required
 
 #define NR_OF_READERS     4
 
@@ -45,9 +45,10 @@
 byte ssPins[4] = {SS_1_PIN, SS_2_PIN, SS_3_PIN, SS_4_PIN};
 
 byte readCard[4];    // Stores scanned ID read from RFID Module
-//byte masterCard[4] = {0xF3, 0x29, 0xEA, 0x21}; // Big Card
+byte masterCard[4] = {0xE5, 0xEE, 0xBD, 0xE4}; // Big Card
 //byte masterCard[4] = {0x79, 0xA2, 0xC6, 0x02}; // Small Card
-byte masterCard[4] = {0xCE, 0xF3, 0xE8, 0x62}; // Bahtiyar Bayram ID Card
+//byte masterCard[4] = {0xCE, 0xF3, 0xE8, 0x62}; // Bahtiyar Bayram ID Card
+//byte masterCard[4] = {0xE6, 0x1E, 0x45, 0xB}; // İbrahim Ethem Dere ID Card
 boolean match = false;          // initialize card match to false
 boolean production = false;
 
